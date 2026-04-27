@@ -25,9 +25,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Volume",
+        name: "Made with ❤️ for ScopeFNF community ",
         // Activity type number (0 = Playing).
-        type: 3, 
+        type: 4, 
       },
     ],
   },
@@ -59,6 +59,8 @@ export const botConfig = {
       { question: "What is your name?", required: true },
       { question: "How old are you?", required: true },
       { question: "Why do you want to join?", required: true },
+      { question: "what is your background?", required: true },
+      { question: "do you mind sharing your X/twitter handle?", required: true },
     ],
 
     // Embed colors by application status.
@@ -88,7 +90,7 @@ export const botConfig = {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#a98806", 
+      primary: "#563612", 
       secondary: "#2F3136", 
 
       // Standard status colors for success/error/warning/info messages.
@@ -136,7 +138,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Scope Bot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -281,7 +283,7 @@ export const botConfig = {
     announcementChannel: null,
 
     // Timezone used to calculate birthday dates.
-    timezone: "UTC",
+    timezone: "UTC+3",
   },
 
   // =========================
