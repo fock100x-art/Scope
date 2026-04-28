@@ -65,9 +65,9 @@ export const botConfig = {
 
     // Embed colors by application status.
     statusColors: {
-      pending: "#FFA500",
-      approved: "#00FF00",
-      denied: "#FF0000",
+      pending: "#563612",
+      approved: "#563612",
+      denied: "#563612",
     },
 
     // How long users must wait before submitting another application (hours).
@@ -94,10 +94,10 @@ export const botConfig = {
       secondary: "#2F3136", 
 
       // Standard status colors for success/error/warning/info messages.
-      success: "#57F287", 
-      error: "#ED4245", 
-      warning: "#FEE75C", 
-      info: "#3498DB", 
+      success: "#563612", 
+      error: "#563612", 
+      warning: "#563612", 
+      info: "#563612", 
 
       // Neutral utility colors.
       light: "#FFFFFF",
@@ -114,18 +114,18 @@ export const botConfig = {
 
       // Feature-specific colors.
       giveaway: {
-        active: "#57F287",
-        ended: "#ED4245",
+        active: "#563612",
+        ended: "#563612",
       },
       ticket: {
-        open: "#57F287",
-        claimed: "#FAA61A",
-        closed: "#ED4245",
-        pending: "#99AAB5",
+        open: "#563612",
+        claimed: "#563612",
+        closed: "#563612",
+        pending: "#563612",
       },
-      economy: "#F1C40F",
-      birthday: "#E91E63",
-      moderation: "#9B59B6",
+      economy: "#563612",
+      birthday: "#563612",
+      moderation: "#563612",
 
       // Ticket priority color mapping.
       priority: {
@@ -191,61 +191,59 @@ export const botConfig = {
   },
 
   // =========================
-  // SHOP SETTINGS
-  // =========================
-  // Add shop defaults here when needed.
-  shop: {
-    
-  },
+// TICKET SYSTEM
+// =========================
+tickets: {
+  // Category ID where new tickets are created (null = no forced category).
+  defaultCategory: null,
 
-  // =========================
-  // TICKET SYSTEM
-  // =========================
-  tickets: {
-    // Category ID where new tickets are created (null = no forced category).
-    defaultCategory: null,
+  // Channel ID where new tickets are created as threads.
+  supportChannel: "CHANNEL_ID_HERE",
 
-    // Role IDs allowed to manage/support tickets.
-    supportRoles: [],
+  // Role IDs allowed to manage/support tickets.
+  supportRoles: [],
 
-    // Priority options users/staff can assign.
-    priorities: {
-      none: {
-        emoji: "⚪",
-        color: "#95A5A6",
-        label: "None",
-      },
-      low: {
-        emoji: "🟢",
-        color: "#2ECC71",
-        label: "Low",
-      },
-      medium: {
-        emoji: "🟡",
-        color: "#F1C40F",
-        label: "Medium",
-      },
-      high: {
-        emoji: "🔴",
-        color: "#E74C3C",
-        label: "High",
-      },
-      urgent: {
-        emoji: "🚨",
-        color: "#E91E63",
-        label: "Urgent",
-      },
+  // Thread name format
+  threadNameFormat: "{panel.name}-{ticket.creator.username}",
+
+  // Priority options users/staff can assign.
+  priorities: {
+    none: {
+      emoji: "⚪",
+      color: "#95A5A6",
+      label: "None",
     },
-
-    // Default priority for new tickets.
-    defaultPriority: "none",
-
-    // Category ID where closed tickets are archived.
-    archiveCategory: null,
-
-    // Channel ID where ticket logs are sent.
-    logChannel: null,
+    low: {
+      emoji: "🟢",
+      color: "#2ECC71",
+      label: "Low",
+    },
+    medium: {
+      emoji: "🟡",
+      color: "#F1C40F",
+      label: "Medium",
+    },
+    high: {
+      emoji: "🔴",
+      color: "#E74C3C",
+      label: "High",
+    },
+    urgent: {
+      emoji: "🚨",
+      color: "#E91E63",
+      label: "Urgent",
+    },
   },
+
+  // Default priority for new tickets.
+  defaultPriority: "none",
+
+  // Category ID where closed tickets are archived.
+  archiveCategory: null,
+
+  // Channel ID where ticket logs are sent.
+  logChannel: null,
+},
 
   // =========================
   // GIVEAWAY SETTINGS
